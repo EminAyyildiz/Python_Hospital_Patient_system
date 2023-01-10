@@ -42,9 +42,16 @@ class Security:
         username = input("Please enter your username :")
         password = input("Please enter your password :")
         if username == self.username and password == self.password:
+            print("ACCESSING THE SYSTEM. PLEASE WAIT....")
+            time.sleep(1.5)
+            print("LOGGED IN\n")
+            
             return True
         elif username == "q" or username == "Q":
             quit()
+        else:
+            print("Wrong username or password")
+            
         return False
 
 administrator = Security("emin", "6001")
